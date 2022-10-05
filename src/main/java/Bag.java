@@ -76,11 +76,13 @@ private String[] contents;
      *       This method should return true if the item was added
      *       and false otherwise.
      */
-    public void addItem(String item) {
+    public boolean addItem(String item) {
         if (this.getNumberOfContents() < this.getCapacity()) {
             this.contents[this.getNumberOfContents()] = item;
             this.numberOfContents += 1;
+            return true;
         }
+        return false;
     }
 
 
@@ -118,7 +120,7 @@ private String[] contents;
         int sourceCapacity = this.capacity;
         this.capacity += n;
         String[] newContents = new String[this.getCapacity()];
-        if (this.getCapacity() + 1 >= 0) System.arraycopy(this.contents, 0, newContents, 0, sourceCapacity);
+        System.arraycopy(this.contents, 0, newContents, 0, sourceCapacity);
         this.contents = newContents;
     }
 
