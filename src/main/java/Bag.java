@@ -94,7 +94,7 @@ private String[] contents;
      *
      * If there are no items in this Bag, return null.
      *
-     * @return
+     * @return the String item at the last index in bag
      */
     public String popItem() {
         if (this.getNumberOfContents() == 0) {
@@ -129,7 +129,7 @@ private String[] contents;
      * This method requires you to have created the private
      * instance variables mentioned above.
      *
-     * @return
+     * @return the details of the bag as a String
      */
     @Override
     public String toString() {
